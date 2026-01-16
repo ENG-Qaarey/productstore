@@ -4,6 +4,7 @@ import CommentsSection from "../components/CommentsSection";
 import { useAuth } from "@clerk/clerk-react";
 import { useProduct, useDeleteProduct } from "../hooks/useProducts";
 import { useParams, Link, useNavigate } from "react-router";
+import ProductImageGallery from "../components/ProductImageGallery";
 
 function ProductPage() {
   const { id } = useParams();
@@ -64,15 +65,11 @@ function ProductPage() {
       </div>
 
       <div className="grid lg:grid-cols-2 gap-6">
-        {/* Image */}
+        {/* Image Gallery */}
         <div className="card bg-base-300">
-          <figure className="p-4">
-            <img
-              src={product.imageUrl}
-              alt={product.title}
-              className="rounded-xl w-full h-80 object-cover"
-            />
-          </figure>
+          <div className="p-4">
+            <ProductImageGallery images={[product.imageUrl]} alt={product.title} />
+          </div>
         </div>
 
         <div className="card bg-base-300">
