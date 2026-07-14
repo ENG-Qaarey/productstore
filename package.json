@@ -7,19 +7,20 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend && npm run build --prefix backend",
-    "start": "npm run db:push --prefix backend && npm run start --prefix backend"
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "build": "cd frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/burakorkmez/productify.git"
+    "url": "git+https://github.com/ENG-Qaarey/productstore.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/burakorkmez/productify/issues"
+    "url": "https://github.com/ENG-Qaarey/productstore/issues"
   },
-  "homepage": "https://github.com/burakorkmez/productify#readme"
+  "homepage": "https://github.com/ENG-Qaarey/productstore#readme"
 }
