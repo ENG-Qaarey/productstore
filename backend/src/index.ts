@@ -46,7 +46,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/comments", commentRoutes);
 
-if (ENV.NODE_ENV === "production") {
+if (ENV.NODE_ENV === "production" && process.env.VERCEL !== "1") {
   const __dirname = path.resolve();
 
   // serve static files from frontend/dist
